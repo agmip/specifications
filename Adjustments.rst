@@ -10,7 +10,7 @@ Environmental Modification in AgMIP Data Formats
 Overview
 --------
 
-Some models *may* support environmental modifications which
+Some models *may* support modifications which
 allow variables to be mutated over time with model control. This
 is beneficial for doing long-term runs or rotations. To provide
 the models with this information from the AgMIP tools, the **Adjustments**
@@ -35,7 +35,8 @@ record:
 
     adjustments: [{"variable":"tmax",
                    "method":"delta",
-                   "date":"0000-01-01",
+                   "startdate":"0000-01-01",
+                   "enddate":"0000-01-01",
                    "value":"2",
                   }]
 
@@ -45,7 +46,7 @@ variable
     ICASA variable name
 
 method
-    Method to apply: delta, multiply, or sub
+    Method to apply: delta, multiply, or substitute
 
 
 value
@@ -53,8 +54,11 @@ value
 
 Each adjustment **can** contain:
 
-date
-    A fixed or relative date to apply on *(needs to the expanded upon)*
+startdate
+    A fixed or relative date to start the adjustment *(needs to the expanded upon)*
+
+enddate
+    A fixed or relative date to remove the adjustment *(needs to the expanded upon)*
 
 apply_to
     When dealing with layered data, which layer (by index) this modification is to apply to.
