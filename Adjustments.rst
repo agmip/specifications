@@ -46,6 +46,7 @@ variable
 
 method
     Method to apply: delta, multiply, or sub
+    (where **delta** is to increase/decrease original value of the variable by the value given, **multiply** multiplies the orignal variable by the value and **sub** replaces the given variable by the given value.)
 
 
 value
