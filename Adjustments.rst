@@ -35,7 +35,7 @@ record:
 
     adjustments: [{"variable":"tmax",
                    "method":"delta",
-                   "date":"0000-01-01",
+                   "date":"00000101",
                    "value":"2",
                   }]
 
@@ -62,7 +62,7 @@ value
 Each adjustment **can** contain:
 
 date
-    A fixed or relative date to apply on *(needs to the expanded upon)*
+    A fixed or relative date to apply on *(needs to the expanded upon)* If not provided, translator should handle this adjustment from the start date of simulation.
 
 apply_to
     When dealing with layered data, which layer (by index) this modification is to apply to.
