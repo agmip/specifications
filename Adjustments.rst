@@ -11,8 +11,8 @@ Overview
 --------
 
 Some models *may* support modifications which
-allow variables to be mutated over time with model control. This
-is beneficial for doing long-term runs or rotations. To provide
+allow variables to be modified over time with model control. This
+is beneficial when simulating FACE experiments, shading studies or other research which temporarily modify environmental inputs. To provide
 the models with this information from the AgMIP tools, the **Adjustments**
 block is to be added to the root level of the ACE JSON Structure.
 
@@ -49,16 +49,16 @@ method
     Method to apply: delta, multiply, or substitute
 
     delta
-        is to increase/decrease original value of the variable by the value given 
+        increases/decreases the original variable by the value 
     
     multiply
         multiplies the orignal variable by the value
    
     substitute
-        replaces the given variable by the given value.)
+        replaces the original variable with the value
 
 value
-    The value to apply to the variable by the method
+    The amount to apply to the variable by the method
 
 Each adjustment **can** contain:
 
