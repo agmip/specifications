@@ -48,6 +48,14 @@ variable
 method
     Method to apply: delta, multiply, or substitute
 
+    delta
+        is to increase/decrease original value of the variable by the value given 
+    
+    multiply
+        multiplies the orignal variable by the value
+   
+    substitute
+        replaces the given variable by the given value.)
 
 value
     The value to apply to the variable by the method
@@ -55,27 +63,27 @@ value
 Each adjustment **can** contain:
 
 startdate
-    A fixed or relative date to start the adjustment *(needs to the expanded upon)*
+    A fixed or relative date to start the adjustment 
+    If no startdate is specified, the changes will begin on the start of simulation date.
 
 enddate
-    A fixed or relative date to remove the adjustment *(needs to the expanded upon)*
+    A fixed or relative date to remove the adjustment 
+    If no enddate is specified, the changes will end at the end of simulation date.
 
 apply_to
     When dealing with layered data, which layer (by index) this modification is to apply to.
 
+
 -------------
 DOME Function
 -------------
-
-A modeler uses a DOME function in their DOME files to specify how to generate these
-modifications.
 
 This example shows how the function would be called to adjust the SLOC variable in the
 upper 5cm of a soil profile.
 
 .. code-block::
 
-    NEW, SLOC, ADJUST(), MULT, 0.95, <5
+    REPLACE, SLOC, ADJUST(), MULTIPLY, 0.95, <5
 
 How the date and layer information should be handled is still being discussed.
 *This format needs to be expanded upon*
