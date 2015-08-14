@@ -26,7 +26,7 @@ ACE Definition
 
 The **adjustment** block has the ability to inform the translator
 of the variable to be adjusted, how it is to be adjusted, by how much, at what schedule,
-and, for layered data (soils, weather), at what level this adjustment is to take place.
+and, for layered data (soils), at what level this adjustment is to take place.
 
 A simple example is TMAX increased by two degrees celsius starting on the first weather
 record:
@@ -71,7 +71,9 @@ enddate
     If no enddate is specified, the changes will end at the end of simulation date.
 
 apply_to
-    When dealing with layered data, which layer (by index) this modification is to apply to.
+    When dealing with soil layer data, which layer (by depth in cm) this modification is to apply to. 
+    << weather data "layers" are covered with the date range, so do not need to be handled here. ARe there any other types of layer information or is this just for soils?
+      CHP: by depth or by soil layer index? Soil layer index presents problems when there are layer modifications also applied in the DOME. I recommend using depth.
 
 
 -------------
