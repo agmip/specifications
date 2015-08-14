@@ -28,16 +28,15 @@ The **adjustment** block has the ability to inform the translator
 of the variable to be adjusted, how it is to be adjusted, by how much, at what schedule,
 and, for layered data (soils), at what level this adjustment is to take place.
 
-A simple example is TMAX increased by two degrees celsius starting on the first weather
-record:
+A simple example is TMAX increased by two degrees celsius starting on January 1, 2010 and ending June 15, 2010:
 
 .. code-block:: javascript
 
     adjustments: [{"variable":"tmax",
                    "method":"delta",
-                   "startdate":"0000-01-01",
-                   "enddate":"0000-01-01",
                    "value":"2",
+                   "startdate":"2010-01-01",
+                   "enddate":"2010-06-15",
                   }]
 
 Each adjustment object in the list **must** contain:
@@ -85,7 +84,7 @@ upper 5cm of a soil profile.
 
 .. code-block::
 
-    <new>, SLOC, ADJUST(), MULTIPLY, , , 0.95, <5
+    <new>, SLOC, ADJUST(), MULTIPLY, 0.95, , , <5
 
 How the date and layer information should be handled is still being discussed.
 *This format needs to be expanded upon*
