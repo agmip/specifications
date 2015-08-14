@@ -64,10 +64,12 @@ Each adjustment **can** contain:
 startdate
     A fixed or relative date to start the adjustment 
     If no startdate is specified, the changes will begin on the start of simulation date.
+      CHP: need details on how a relative date would work. Offset from start of simulation or planting date? Do we need this?
 
 enddate
     A fixed or relative date to remove the adjustment 
     If no enddate is specified, the changes will end at the end of simulation date.
+      CHP: need details on how a relative date would work. Offset from start of simulation or planting date or startdate? Do we need this?
 
 apply_to
     When dealing with soil layer data, which layer (by depth in cm) this modification is to apply to. 
@@ -86,5 +88,11 @@ upper 5cm of a soil profile.
 
     <new>, SLOC, ADJUST(), MULTIPLY, 0.95, , , <5
 
-How the date and layer information should be handled is still being discussed.
+**NOTES**
+
+1. The operator "<new>" represents a new operator that we need to decide upon. The current operators "REPLACE" and "FILL" will not work here because this is a temporary modification that will not overwrite the existing value of the variable, but replace it for a range of dates.
+      CHP: I suggest that we use MODTEMP to replace <new> in the DOME function. 
+2. Blank fields denote missing optional arguments for startdate and enddate. 
+3. How the date and layer information should be handled is still being discussed.
+
 *This format needs to be expanded upon*
