@@ -83,7 +83,7 @@ upper 5cm of a soil profile.
 
 .. code-block::
 
-    REPLACE, SLOC, ADJUST(), MULTIPLY, 0.95, <5
+    NEW, SLOC, ADJUST(), MULTIPLY, , , 0.95, <5
 
 How the date and layer information should be handled is still being discussed.
 *This format needs to be expanded upon*
