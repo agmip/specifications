@@ -1,8 +1,8 @@
-================================================
-Environmental Modification in AgMIP Data Formats
-================================================
-:Version: 1.0.0-DRAFT
-:Date: 2015-05-13
+========================================================
+Temporary Modification of Variable in AgMIP Data Formats
+========================================================
+:Version: 1.0.1-DRAFT
+:Date: 2015-08-14
 
 .. contents::
 
